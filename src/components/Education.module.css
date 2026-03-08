@@ -1,0 +1,48 @@
+.section { padding: 6rem 4rem; }
+.inner { max-width: 1200px; margin: 0 auto; }
+.label {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.75rem;
+}
+.label span { display: inline-block; width: 36px; height: 1px; background: var(--accent); }
+.h2 {
+  font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700; letter-spacing: -0.02em; margin-bottom: 2.5rem;
+}
+.grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+}
+.card {
+  background: var(--card); padding: 2.5rem;
+  transition: background 0.2s;
+}
+.card:hover { background: rgba(100,220,160,0.025); }
+.degree { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
+.school { color: var(--accent2); font-size: 0.82rem; margin-bottom: 0.3rem; }
+.year { color: var(--muted); font-size: 0.72rem; }
+.gpa  { color: var(--accent); font-size: 0.75rem; margin-top: 0.5rem; font-weight: 600; }
+.detail { color: var(--muted); font-size: 0.72rem; margin-top: 0.4rem; line-height: 1.7; }
+.certLabel { margin-top: 3rem; }
+.certs { display: flex; flex-direction: column; gap: 1px; }
+.certCard {
+  display: flex; align-items: center; gap: 1.5rem;
+  background: var(--card); padding: 1.75rem 2rem;
+  border: 1px solid var(--border); max-width: 500px;
+  transition: border-color 0.2s;
+}
+.certCard:hover { border-color: var(--border-hover); }
+.certBadge {
+  width: 50px; height: 50px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+}
+.certName { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+.certOrg { color: var(--muted); font-size: 0.75rem; margin-top: 0.15rem; }
+.certYear { color: var(--accent); font-size: 0.7rem; margin-top: 0.2rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

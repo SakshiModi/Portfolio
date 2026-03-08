@@ -1,0 +1,117 @@
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 0 4rem; padding-top: 80px;
+  position: relative; overflow: hidden;
+}
+.gridLines {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(100,220,160,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100,220,160,0.035) 1px, transparent 1px);
+  background-size: 64px 64px; pointer-events: none;
+}
+.glow1 {
+  position: absolute; top: -15%; right: -8%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(100,220,160,0.055) 0%, transparent 65%);
+  pointer-events: none;
+}
+.glow2 {
+  position: absolute; bottom: 5%; left: -5%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(77,184,240,0.04) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.tag {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.8rem;
+  animation: fadeUp 0.6s 0.1s both;
+}
+.tagLine {
+  display: inline-block; width: 36px; height: 1px; background: var(--accent);
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  font-weight: 800; line-height: 0.92; letter-spacing: -0.03em;
+  animation: fadeUp 0.7s 0.2s both;
+}
+.accent { color: var(--accent); }
+
+.sub {
+  margin-top: 2.2rem; max-width: 56ch;
+  color: var(--muted); font-size: 0.88rem; line-height: 1.85;
+  animation: fadeUp 0.6s 0.35s both;
+}
+
+.cta {
+  margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;
+  animation: fadeUp 0.6s 0.5s both;
+}
+
+.openTo {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-top: 1.25rem; margin-bottom: -0.75rem;
+  font-size: 0.75rem; letter-spacing: 0.06em;
+  color: var(--accent); background: rgba(100,220,160,0.08);
+  border: 1px solid rgba(100,220,160,0.25);
+  padding: 0.4rem 1rem; border-radius: 2px;
+  animation: fadeUp 0.6s 0.42s both;
+}
+.dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+.btnDisabled {
+  display: inline-block; padding: 0.8rem 2.2rem;
+  border-radius: 2px; font-family: var(--font-mono);
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  background: transparent; color: var(--muted);
+  border: 1px dashed var(--border); cursor: not-allowed; opacity: 0.5;
+}
+.btnPrimary, .btnOutline {
+  display: inline-block; padding: 0.8rem 2.2rem;
+  border-radius: 2px; font-family: var(--font-mono);
+  font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; transition: all 0.2s;
+}
+.btnPrimary {
+  background: var(--accent); color: #000;
+  border: 1px solid var(--accent);
+}
+.btnPrimary:hover { background: transparent; color: var(--accent); }
+.btnOutline {
+  background: transparent; color: var(--text); border: 1px solid var(--border);
+}
+.btnOutline:hover { border-color: var(--accent2); color: var(--accent2); }
+
+.stats {
+  margin-top: 5rem; display: flex; gap: 4rem; flex-wrap: wrap;
+  padding-top: 3rem; border-top: 1px solid var(--border);
+  animation: fadeUp 0.6s 0.65s both;
+}
+.stat {}
+.statNum {
+  font-family: var(--font-display); font-size: 2.5rem;
+  font-weight: 800; color: var(--accent); line-height: 1;
+}
+.statLabel { color: var(--muted); font-size: 0.72rem; margin-top: 0.3rem; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 5rem 1.5rem 3rem; }
+  .stats { gap: 2rem; margin-top: 3rem; }
+}
