@@ -2,9 +2,9 @@
 export const portfolioData = {
   hero: {
     name: 'Sakshi Modi',
-    role: 'Backend Software Engineer',
+    role: 'Software Engineer',
     location: 'Jersey City, NJ',
-    tagline: 'Backend Software Developer with 4+ years in Python & Java. Built systems saving $8M+ quarterly.',
+    tagline: 'Software Engineer with 4+ years in Python & Java. Built systems saving $8M+ quarterly.',
     openTo: 'Open to Backend · Full-Stack · Data Engineering roles',
     linkedin: 'https://www.linkedin.com/in/sakshimodi1/',
     github: 'https://github.com/SakshiModi',
