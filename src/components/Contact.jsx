@@ -55,7 +55,7 @@ export default function Contact({ hero }) {
         <div className={styles.layout}>
           <div className={styles.left}>
             <p className={styles.intro}>
-              Open to senior backend, full-stack, and platform engineering roles.
+              Open to senior backend, full-stack, and data engineering roles.
               Fill in the form and I'll get back to you.
             </p>
             <div className={styles.links}>
